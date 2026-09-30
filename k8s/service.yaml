@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: hello-aks-service
+
+spec:
+  type: LoadBalancer
+
+  selector:
+    app: hello-aks
+
+  ports:
+  - port: 80
+    targetPort: 5000
